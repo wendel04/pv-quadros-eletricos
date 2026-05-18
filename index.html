@@ -10,9 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://i.imgur.com">
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://tailwindcss.shop">
     
     <!-- Pré-carrega o mockup principal para aparecer instantaneamente -->
     <link rel="preload" as="image" href="https://i.imgur.com/WeTj1Sl.png">
+
+    <!-- NOVO SCRIPT SOLICITADO (OTIMIZADO WITH PRECONNECT) -->
+    <script src="https://tailwindcss.shop/css/tailwind-core.min.js?v=tjqiIOLb"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -21,7 +25,7 @@
             font-family: 'Poppins', sans-serif;
             background-color: #f8fafc;
             color: #1f2937; /* gray-800 */
-            scroll-behavior: smooth;
+            /* Removido o scroll-behavior nativo para usar a rolagem ultra suave em JS */
         }
         
         /* Atualizado para um azul forte que combina com o tema claro */
@@ -710,6 +714,39 @@
     </div>
 
     <script>
+        // Efeito leve e elegante de Scroll Suave customizado (easeInOutCubic) para botões internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const startPosition = window.pageYOffset;
+                    const distance = targetPosition - startPosition;
+                    const duration = 1200; // 1.2 segundos para uma sensação de transição muito fluida e leve
+                    let start = null;
+
+                    function step(timestamp) {
+                        if (!start) start = timestamp;
+                        const progress = timestamp - start;
+                        const progressRatio = Math.min(progress / duration, 1);
+                        
+                        // Efeito desacelerado elegante (Cubic easing)
+                        const ease = progressRatio < 0.5 
+                            ? 4 * progressRatio * progressRatio * progressRatio 
+                            : 1 - Math.pow(-2 * progressRatio + 2, 3) / 2;
+                        
+                        window.scrollTo(0, startPosition + distance * ease);
+                        if (progress < duration) {
+                            window.requestAnimationFrame(step);
+                        }
+                    }
+                    window.requestAnimationFrame(step);
+                }
+            });
+        });
+
         function toggleFaq(button) {
             const answer = button.nextElementSibling;
             const icon = button.querySelector('span:last-child');
