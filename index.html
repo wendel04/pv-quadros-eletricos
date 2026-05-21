@@ -12,8 +12,11 @@
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://tailwindcss.shop">
     
-    <!-- Pré-carrega o mockup principal para aparecer instantaneamente -->
-    <link rel="preload" as="image" href="https://i.imgur.com/WeTj1Sl.png">
+    <!-- DNS Prefetching para acelerar a resolução de IP do servidor de imagens -->
+    <link rel="dns-prefetch" href="https://i.imgur.com">
+    
+    <!-- Pré-carrega o mockup principal em formato WebP otimizado para aparecer instantaneamente -->
+    <link rel="preload" as="image" href="https://i.imgur.com/WeTj1Sl.webp">
 
     <!-- SCRIPT SOLICITADO (OTIMIZADO COM PRECONNECT) -->
     <script src="https://tailwindcss.shop/css/tailwind-core.min.js?v=tjqiIOLb"></script>
@@ -123,8 +126,8 @@
             </h1>
             
             <div class="mb-4 w-full max-w-lg mx-auto relative z-20">
-                <!-- Imagem do topo com Prioridade Alta e Sem Lazy Load -->
-                <img src="https://i.imgur.com/WeTj1Sl.png" fetchpriority="high" alt="Mockup do Produto Principal" class="w-full h-auto drop-shadow-2xl">
+                <!-- Imagem do topo com Prioridade Alta em WebP otimizado -->
+                <img src="https://i.imgur.com/WeTj1Sl.webp" fetchpriority="high" alt="Mockup do Produto Principal" class="w-full h-auto drop-shadow-2xl">
             </div>
 
             <p class="text-base md:text-xl text-gray-600 mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed relative z-10">
@@ -148,31 +151,31 @@
                     <!-- O contêiner de animação CSS impede qualquer stutter/pulo visual -->
                     <div class="animate-infinite-scroll py-4">
                         
-                        <!-- GRUPO 1 - Imagens maiores usando Viewport Width (vw) responsivo para manter a proporção perfeita -->
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/nQH1T1J.png" loading="lazy" decoding="async" alt="Modelo de Quadro 1" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/gJWEuFi.png" loading="lazy" decoding="async" alt="Modelo de Quadro 2" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/x1BPnH0.png" loading="lazy" decoding="async" alt="Modelo de Quadro 3" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/r0uDHna.png" loading="lazy" decoding="async" alt="Modelo de Quadro 4" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/K3euyLV.png" loading="lazy" decoding="async" alt="Modelo de Quadro 5" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/PkW9El4.png" loading="lazy" decoding="async" alt="Modelo de Quadro 6" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/99KpXLO.png" loading="lazy" decoding="async" alt="Modelo de Quadro 7" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/sm09tmP.png" loading="lazy" decoding="async" alt="Modelo de Quadro 8" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/v9it15s.png" loading="lazy" decoding="async" alt="Modelo de Quadro 9" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/ZRXfBoL.png" loading="lazy" decoding="async" alt="Modelo de Quadro 10" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/lDgH6RV.png" loading="lazy" decoding="async" alt="Modelo de Quadro 11" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <!-- GRUPO 1 - Imagens em formato WebP de alta velocidade -->
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/nQH1T1J.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 1" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/gJWEuFi.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 2" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/x1BPnH0.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 3" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/r0uDHna.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 4" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/K3euyLV.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 5" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/PkW9El4.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 6" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/99KpXLO.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 7" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/sm09tmP.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 8" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/v9it15s.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 9" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/ZRXfBoL.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 10" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/lDgH6RV.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 11" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
 
-                        <!-- GRUPO 2 (Duplicado idêntico para manter o fluxo sem cortes) -->
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/nQH1T1J.png" loading="lazy" decoding="async" alt="Modelo de Quadro 1" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/gJWEuFi.png" loading="lazy" decoding="async" alt="Modelo de Quadro 2" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/x1BPnH0.png" loading="lazy" decoding="async" alt="Modelo de Quadro 3" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/r0uDHna.png" loading="lazy" decoding="async" alt="Modelo de Quadro 4" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/K3euyLV.png" loading="lazy" decoding="async" alt="Modelo de Quadro 5" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/PkW9El4.png" loading="lazy" decoding="async" alt="Modelo de Quadro 6" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/99KpXLO.png" loading="lazy" decoding="async" alt="Modelo de Quadro 7" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/sm09tmP.png" loading="lazy" decoding="async" alt="Modelo de Quadro 8" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/v9it15s.png" loading="lazy" decoding="async" alt="Modelo de Quadro 9" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/ZRXfBoL.png" loading="lazy" decoding="async" alt="Modelo de Quadro 10" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
-                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/lDgH6RV.png" loading="lazy" decoding="async" alt="Modelo de Quadro 11" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <!-- GRUPO 2 (Duplicado idêntico em WebP para manter o fluxo suave) -->
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/nQH1T1J.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 1" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/gJWEuFi.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 2" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/x1BPnH0.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 3" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/r0uDHna.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 4" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/K3euyLV.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 5" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/PkW9El4.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 6" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/99KpXLO.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 7" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/sm09tmP.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 8" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/v9it15s.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 9" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/ZRXfBoL.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 10" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
+                        <div class="w-[80vw] sm:w-[50vw] md:w-[33vw] lg:w-[25vw] flex-shrink-0 px-2 md:px-4"><img src="https://i.imgur.com/lDgH6RV.webp" loading="lazy" decoding="async" alt="Modelo de Quadro 11" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300 pointer-events-none"></div>
                         
                     </div>
                 </div>
@@ -373,7 +376,8 @@
             <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4 md:mb-6 relative z-10">Veja tudo o que você vai receber ao acessar nossos quadros prontos</h2>
             
             <div class="mb-4 md:mb-6 w-full max-w-lg mx-auto relative z-20">
-                <img src="https://i.imgur.com/WeTj1Sl.png" loading="lazy" decoding="async" alt="Mockup do Produto Principal" class="w-full h-auto drop-shadow-2xl">
+                <!-- Imagem do bloco em WebP otimizado -->
+                <img src="https://i.imgur.com/WeTj1Sl.webp" loading="lazy" decoding="async" alt="Mockup do Produto Principal" class="w-full h-auto drop-shadow-2xl">
             </div>
 
             <div class="bg-card border border-card shadow-lg rounded-xl p-6 md:p-10 inline-block text-left w-full max-w-2xl mb-8 md:mb-10 relative z-10">
@@ -413,7 +417,7 @@
                 <!-- Bonus 1 -->
                 <div class="bg-white border border-gray-200 shadow-sm rounded-2xl p-5 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full max-w-3xl hover:shadow-md transition-shadow">
                     <div class="w-full md:w-56 flex-shrink-0 flex items-center justify-center">
-                        <img src="https://i.imgur.com/R61d0iS.png" loading="lazy" decoding="async" alt="Mockup Bônus 1" class="w-48 md:w-full h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.imgur.com/R61d0iS.webp" loading="lazy" decoding="async" alt="Mockup Bônus 1" class="w-48 md:w-full h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="flex-1 text-center md:text-left">
                         <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">🎁 BÔNUS #1 — Biblioteca de Componentes Elétricos</h3>
@@ -424,7 +428,7 @@
                 <!-- Bonus 2 -->
                 <div class="bg-white border border-gray-200 shadow-sm rounded-2xl p-5 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full max-w-3xl hover:shadow-md transition-shadow">
                     <div class="w-full md:w-56 flex-shrink-0 flex items-center justify-center">
-                        <img src="https://i.imgur.com/CybedT0.png" loading="lazy" decoding="async" alt="Mockup Bônus 2" class="w-48 md:w-full h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.imgur.com/CybedT0.webp" loading="lazy" decoding="async" alt="Mockup Bônus 2" class="w-48 md:w-full h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="flex-1 text-center md:text-left">
                         <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">🎁 BÔNUS #2 — Modelos Premium Adicionais</h3>
@@ -435,7 +439,7 @@
                 <!-- Bonus 3 -->
                 <div class="bg-white border border-gray-200 shadow-sm rounded-2xl p-5 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full max-w-3xl hover:shadow-md transition-shadow">
                     <div class="w-full md:w-56 flex-shrink-0 flex items-center justify-center">
-                        <img src="https://i.imgur.com/I0MoFNH.png" loading="lazy" decoding="async" alt="Mockup Bônus 3" class="w-48 md:w-full h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.imgur.com/I0MoFNH.webp" loading="lazy" decoding="async" alt="Mockup Bônus 3" class="w-48 md:w-full h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="flex-1 text-center md:text-left">
                         <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">🎁 BÔNUS #3 — Guia Rápido de Orçamento</h3>
@@ -446,7 +450,7 @@
                 <!-- Bonus 4 -->
                 <div class="bg-white border border-gray-200 shadow-sm rounded-2xl p-5 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full max-w-3xl hover:shadow-md transition-shadow">
                     <div class="w-full md:w-56 flex-shrink-0 flex items-center justify-center">
-                        <img src="https://i.imgur.com/Re1fNVl.png" loading="lazy" decoding="async" alt="Mockup Bônus 4" class="w-48 md:w-full h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.imgur.com/Re1fNVl.webp" loading="lazy" decoding="async" alt="Mockup Bônus 4" class="w-48 md:w-full h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="flex-1 text-center md:text-left">
                         <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">🎁 BÔNUS #4 — Atualizações Futuras</h3>
@@ -457,7 +461,7 @@
                 <!-- Bonus 5 -->
                 <div class="bg-white border border-gray-200 shadow-sm rounded-2xl p-5 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full max-w-3xl hover:shadow-md transition-shadow">
                     <div class="w-full md:w-56 flex-shrink-0 flex items-center justify-center">
-                        <img src="https://i.imgur.com/29dMy24.png" loading="lazy" decoding="async" alt="Mockup Bônus 5" class="w-48 md:w-full h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.imgur.com/29dMy24.webp" loading="lazy" decoding="async" alt="Mockup Bônus 5" class="w-48 md:w-full h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="flex-1 text-center md:text-left">
                         <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">🎁 BÔNUS #5 — Grupo Exclusivo de WhatsApp</h3>
@@ -480,7 +484,7 @@
                     <div>
                         <h3 class="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6 text-gray-900 relative z-10">PACOTE BÁSICO</h3>
                         <div class="w-3/4 md:w-4/5 mx-auto mb-6 md:mb-8 relative z-20">
-                            <img src="https://i.imgur.com/9RBOQoi.png" loading="lazy" decoding="async" alt="Mockup Pacote Básico" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300">
+                            <img src="https://i.imgur.com/9RBOQoi.webp" loading="lazy" decoding="async" alt="Mockup Pacote Básico" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300">
                         </div>
                         <ul class="space-y-2.5 md:space-y-3 text-sm md:text-base text-gray-700 mb-6 md:mb-8 relative z-10">
                             <li class="flex items-start gap-2"><span>📁</span> +60 modelos prontos</li>
@@ -516,7 +520,7 @@
                     <div>
                         <h3 class="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6 text-primary relative z-10">PACOTE COMPLETO</h3>
                         <div class="w-3/4 md:w-4/5 mx-auto mb-4 md:mb-5 relative z-20">
-                            <img src="https://i.imgur.com/WeTj1Sl.png" loading="lazy" decoding="async" alt="Mockup Pacote Completo" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300">
+                            <img src="https://i.imgur.com/WeTj1Sl.webp" loading="lazy" decoding="async" alt="Mockup Pacote Completo" class="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-300">
                         </div>
                         
                         <!-- TAG DE PROVA SOCIAL ADICIONADA AQUI -->
